@@ -1,0 +1,141 @@
+body {
+    background-color: black;
+    padding: 30px;
+}
+
+.container {
+    background-color: rgb(61, 61, 61);
+    width: 80%;
+    height: 100vh;
+    overflow: scroll;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.head {
+    margin: auto;
+    width: 80%;
+    background-color: rgb(36, 36, 36);
+    text-align: center;
+    padding: 20px 0px;
+    border-radius: 5px 5px 0px 0px;
+    color: aliceblue;
+
+}
+
+input {
+    width: 350px;
+    height: 35px;
+    border-radius: 20px;
+    border: none;
+    text-align: center;
+    font-size: 16px;
+    font-style: italic;
+}
+
+button {
+    width: 90px;
+    height: 35px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(189, 189, 189);
+}
+
+.card {
+    background-color: rgb(206, 206, 206);
+    width: 25%;
+    margin: 15px;
+    background-color: aqua;
+    box-shadow: 2px 2px 5px 1px;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+
+}
+
+:root {
+    --gutter: 20px;
+}
+
+.app {
+    padding: var(--gutter) 0;
+    display: grid;
+    grid-gap: var(--gutter) 0;
+    grid-template-columns: var(--gutter) 1fr var(--gutter);
+    align-content: start;
+}
+
+.app>* {
+    grid-column: 2 / -2;
+}
+
+.app>.full {
+    grid-column: 1 / -1;
+}
+
+.hs {
+    display: grid;
+    grid-gap: calc(var(--gutter) / 2);
+    grid-template-columns: 10px repeat(var(--total), calc(50% - var(--gutter) * 2)) 10px;
+    grid-template-rows: minmax(150px, 1fr);
+
+    overflow-x: scroll;
+    scroll-snap-type: x proximity;
+    padding-bottom: calc(.75 * var(--gutter));
+    margin-bottom: calc(-.25 * var(--gutter));
+}
+
+.hs:before,
+.hs:after {
+    content: '';
+}
+
+
+/* Demo styles */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    background: #456173;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+.app {
+    width: 375px;
+    height: 667px;
+    background: #DBD0BC;
+    overflow-y: scroll;
+}
+
+.hs>li,
+.item {
+    scroll-snap-align: center;
+    padding: calc(var(--gutter) / 2 * 1.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 8px;
+}
